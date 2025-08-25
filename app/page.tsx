@@ -22,8 +22,8 @@ export default function Home() {
 
       <Hero />
       <Projects />
-      <TradingJourney />
       <Skills />
+      <TradingJourney />
       <ContactIcons />
     </main>
   );
