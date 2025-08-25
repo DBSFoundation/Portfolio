@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Dandy DS | Portfolio",
+  title: "Premilyader | Portfolio",
   description: "Crypto Trader, Full-Stack Developer & Airdrop Hunter",
 };
 
