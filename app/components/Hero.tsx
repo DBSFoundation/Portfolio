@@ -8,9 +8,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: -50, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-5xl sm:text-6xl font-extrabold text-white drop-shadow-lg"
+        className="text-5xl sm:text-6xl font-extrabold text-blue drop-shadow-lg"
       >
-        Hi, I’m Dandy Dwi Septiadi
+        Hi, I’m 
+        <br />Dandy Dwi Septiadi
       </motion.h1>
 
       <motion.p
@@ -23,20 +24,6 @@ export default function Hero() {
         <br />
         Passionate about building fintech & crypto apps for the global market.
       </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="mt-8 flex gap-6"
-      >
-        <a href="#projects" className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
-          View Projects
-        </a>
-        <a href="#contact" className="px-6 py-3 border border-gray-500 rounded-xl hover:bg-gray-700 transition transform hover:scale-105">
-          Contact Me
-        </a>
-      </motion.div>
     </section>
   );
 }
