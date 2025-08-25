@@ -1,36 +1,68 @@
 "use client";
+import { motion } from "framer-motion";
+
+const projects = [
+  { 
+    title: "Crypto Dashboard", 
+    desc: "Real-time price tracker using CoinGecko API.", 
+    live: "https://crypto-dashboard.example.com",
+    github: "https://github.com/yourname/crypto-dashboard"
+  },
+  { 
+    title: "E-Commerce Mini App", 
+    desc: "Full-stack cart & checkout app.", 
+    live: "https://ecommerce-miniapp.example.com",
+    github: "https://github.com/yourname/ecommerce-miniapp"
+  },
+  { 
+    title: "Real-Time Chat App", 
+    desc: "Messaging platform with Socket.io.", 
+    live: "https://realtime-chat.example.com",
+    github: "https://github.com/yourname/realtime-chat"
+  },
+  { 
+    title: "Library CRUD System", 
+    desc: "Add, edit, delete books with Node.js backend.", 
+    live: "https://library-crud.example.com",
+    github: "https://github.com/yourname/library-crud"
+  }
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "Crypto Dashboard",
-      desc: "Real-time price tracker using CoinGecko API with charts & search feature.",
-      link: "https://t.me/DDS_Inc",
-    },
-    {
-      title: "E-Commerce Mini App",
-      desc: "Full-stack app with cart, checkout, and admin panel. Built with Next.js & PostgreSQL.",
-      link: "https://t.me/DDS_Inc",
-    },
-    {
-      title: "Trading Bot",
-      desc: "Automated trading bot with custom strategies for crypto & forex.",
-      link: "https://t.me/DDS_Inc",
-    },
-  ];
-
   return (
-    <section className="py-20 bg-gray-900 text-center" id="projects">
-      <h2 className="text-3xl font-bold mb-10">🚀 Projects</h2>
-      <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-        {projects.map((p, i) => (
-          <div key={i} className="bg-gray-800 p-6 rounded-xl shadow hover:scale-105 transition">
-            <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-            <p className="text-gray-300 mb-4">{p.desc}</p>
-            <a href={p.link} className="text-blue-400 hover:underline">
-              View Project →
-            </a>
-          </div>
+    <section id="projects" className="py-20 px-6">
+      <h2 className="text-3xl font-bold text-center mb-12">🚀 Projects</h2>
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {projects.map((proj, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ scale: 1.05, boxShadow: "0px 20px 40px rgba(0,0,0,0.3)" }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.2 }}
+            className="bg-gray-800 p-6 rounded-2xl shadow-lg"
+          >
+            <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
+            <p className="text-gray-300 mb-4">{proj.desc}</p>
+            <div className="flex gap-4">
+              <a 
+                href={proj.live} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                Live Demo
+              </a>
+              <a 
+                href={proj.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                GitHub
+              </a>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>

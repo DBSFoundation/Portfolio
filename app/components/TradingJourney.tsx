@@ -1,16 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function TradingJourney() {
-  const journey = [
-    { year: "2013", desc: "Started as Airdrop Hunter & Bitcoin explorer. Learned market psychology & volatility." },
-    { year: "2017", desc: "Dived into Ethereum & ICOs. Gained experience in risk management & portfolio balancing." },
-    { year: "2020", desc: "Integrated Forex strategies with DeFi yield farming. Built trading bots." },
-    { year: "2023+", desc: "Learning Rust & Web3 development. Goal: combine trading + coding to build global fintech solutions." },
-  ];
+const journey = [
+  { year: "2013", desc: "Started as Airdrop Hunter & Bitcoin explorer. Learned market psychology & volatility." },
+  { year: "2017", desc: "Dived into Ethereum & ICOs. Gained experience in risk management & portfolio balancing." },
+  { year: "2020", desc: "Integrated Forex strategies with DeFi yield farming. Built trading bots." },
+  { year: "2023+", desc: "Learning Rust & Web3 development. Goal: combine trading + coding to build global fintech solutions." },
+];
 
+export default function TradingJourney() {
   return (
-    <section className="py-20 px-6 text-center" id="trading">
+    <section className="py-20 px-6 text-center">
       <h2 className="text-3xl font-bold mb-10">📈 Trading & Crypto Journey</h2>
       <div className="max-w-4xl mx-auto space-y-6">
         {journey.map((j, i) => (

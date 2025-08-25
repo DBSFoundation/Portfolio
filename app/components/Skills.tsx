@@ -1,6 +1,7 @@
 "use client";
 import { FaReact, FaNodeJs, FaBitcoin, FaChartLine } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance, SiBitcoin } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "React", icon: <FaReact size={50} /> },
@@ -8,21 +9,28 @@ const skills = [
   { name: "TailwindCSS", icon: <SiTailwindcss size={50} /> },
   { name: "TypeScript", icon: <SiTypescript size={50} /> },
   { name: "Node.js", icon: <FaNodeJs size={50} /> },
-  { name: "Crypto", icon: <FaBitcoin size={50} /> },
+  { name: "Bitcoin", icon: <FaBitcoin size={50} /> },
   { name: "Trading", icon: <FaChartLine size={50} /> },
-  { name: "Airdrop Hunter", icon: <FaBitcoin size={50} className="text-yellow-300" /> },
+  { name: "Airdrop Hunter", icon: <SiBitcoin size={50} /> },
 ];
 
 export default function Skills() {
   return (
-    <section className="py-20 text-center bg-gray-900" id="skills">
+    <section className="py-20 text-center">
       <h2 className="text-3xl font-bold mb-12">🛠 Skills & Tools</h2>
       <div className="flex flex-wrap justify-center gap-12">
         {skills.map((s, i) => (
-          <div key={i} className="flex flex-col items-center gap-2 text-gray-200 hover:text-blue-400 transition">
+          <motion.div
+            key={i}
+            whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.2, type: "spring", stiffness: 100 }}
+            className="flex flex-col items-center text-gray-300 cursor-pointer"
+          >
             {s.icon}
             <span className="mt-2">{s.name}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
