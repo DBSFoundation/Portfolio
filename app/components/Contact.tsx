@@ -1,6 +1,8 @@
 "use client";
+import { motion } from "framer-motion";
 import { FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp, FaInstagram, FaTelegram, FaTwitter } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
+import SectionHeading from "./SectionHeading";
 
 export default function ContactIcons() {
   const contacts = [
@@ -15,21 +17,27 @@ export default function ContactIcons() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 text-center bg-gray-900">
-      <h2 className="text-3xl font-bold mb-12 text-white">📬 Contact</h2>
-      <div className="flex flex-wrap justify-center gap-4">
+    <section id="contact" className="py-20 px-6 bg-gray-900">
+      <SectionHeading title="Contact" />
+      <motion.div 
+        className="flex flex-wrap justify-center gap-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         {contacts.map((c, i) => (
-          <a
+          <motion.a
             key={i}
             href={c.link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center w-16 h-16 rounded-full text-white ${c.color} transition`}
+            className={`flex items-center justify-center w-16 h-16 rounded-full text-white ${c.color} shadow-lg transition transform hover:scale-110`}
+            whileHover={{ rotate: 10 }}
           >
             {c.icon}
-          </a>
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
