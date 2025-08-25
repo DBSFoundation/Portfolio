@@ -1,18 +1,30 @@
 "use client";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
+  const contacts = [
+    { name: "Email", icon: <FaEnvelope size={30} />, link: "mailto:dandyds26@gmail.com" },
+    { name: "GitHub", icon: <FaGithub size={30} />, link: "https://github.com/DBSFoundation" },
+    { name: "LinkedIn", icon: <FaLinkedin size={30} />, link: "https://linkedin.com/in/dandyds" },
+  ];
+
   return (
-    <section className="py-20 px-6 text-center bg-gray-900">
-      <h2 className="text-3xl font-bold mb-10">📬 Contact</h2>
-      <p className="text-gray-300 mb-4">
-        Email: <a href="mailto:youremail@example.com" className="text-blue-400">dandyds26@gmail.com</a>
-      </p>
-      <p className="text-gray-300 mb-4">
-        LinkedIn: <a href="#" className="text-blue-400">linkedin.com/in/dandyds</a>
-      </p>
-      <p className="text-gray-300 mb-4">
-        GitHub: <a href="#" className="text-blue-400">github.com/DBSFoundation</a>
-      </p>
+    <section className="py-20 px-6 text-center bg-gray-900" id="contact">
+      <h2 className="text-3xl font-bold mb-10 text-white">📬 Contact Me</h2>
+      <div className="flex justify-center gap-12">
+        {contacts.map((c, i) => (
+          <a
+            key={i}
+            href={c.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 text-gray-300 hover:text-blue-400 transition"
+          >
+            {c.icon}
+            <span className="mt-1">{c.name}</span>
+          </a>
+        ))}
+      </div>
     </section>
   );
 }
