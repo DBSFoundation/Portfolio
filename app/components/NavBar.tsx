@@ -5,23 +5,18 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [active, setActive] = useState("projects");
   const [scrollY, setScrollY] = useState(0);
+  const sections = ["projects","skills","trading","airdrop","contact"];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+    const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Optional: highlight based on scroll position
-  const sections = ["projects","skills","trading","airdrop","contact"];
   useEffect(() => {
     for (let s of sections) {
       const el = document.getElementById(s);
-      if (el && scrollY >= el.offsetTop - 100) {
-        setActive(s);
-      }
+      if (el && scrollY >= el.offsetTop - 100) setActive(s);
     }
   }, [scrollY]);
 

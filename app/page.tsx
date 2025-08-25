@@ -1,4 +1,3 @@
-
 "use client";
 import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
@@ -8,12 +7,11 @@ import Trading from "./components/TradingJourney";
 import Airdrop from "./components/Airdrop";
 import ContactIcons from "./components/Contact";
 
-
 export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="pt-24">
+      <main className="pt-20">
         <Hero />
         <Projects />
         <Skills />
