@@ -1,19 +1,13 @@
 import "./globals.css";
-import { ReactNode } from "react";
 
 export const metadata = {
   title: "Dandy DS | Portfolio",
-  description: "Crypto Trader, Full-Stack Developer, Airdrop Hunter since 2013",
+  description: "Crypto Trader, Full-Stack Developer & Airdrop Hunter",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body>{children}</body>
     </html>
   );
