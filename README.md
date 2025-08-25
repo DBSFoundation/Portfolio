@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,31 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# 🚀 Portfolio Website
+
+Hi 👋, ini adalah portfolio saya yang dibangun dengan **Next.js + TailwindCSS**  
+Dideploy otomatis di Vercel ✨  
+
+🌍 **Live Website:** [Klik di sini](https://portfolio.vercel.app)  
+
+---
+
+## 📌 Fitur Utama
+- Responsive design (mobile & desktop friendly)  
+- Landing page modern dengan animasi  
+- Project showcase + contact form  
+- Auto deploy dari GitHub → Vercel  
+
+---
+
+## ⚡ Teknologi yang Dipakai
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Vercel](https://vercel.com/)
+
+---
+
+✨ Jangan lupa ⭐ repo ini kalau suka dengan project saya!
+>>>>>>> 63545d520a058fdede8089cb469d09922ef066f3

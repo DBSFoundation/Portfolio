@@ -1,11 +1,19 @@
 # dependencies
 /node_modules
+<<<<<<< HEAD
 /.pnp
 .pnp.js
+=======
+
+# production
+/.next
+/out
+>>>>>>> 63545d520a058fdede8089cb469d09922ef066f3
 
 # testing
 /coverage
 
+<<<<<<< HEAD
 # next.js
 /.next/
 /out/
@@ -13,6 +21,13 @@
 
 # production
 *.log
+=======
+# misc
+.DS_Store
+*.pem
+
+# debug
+>>>>>>> 63545d520a058fdede8089cb469d09922ef066f3
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -23,8 +38,18 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+<<<<<<< HEAD
 # misc
 .DS_Store
 *.swp
 .idea/
 .vscode/
+=======
+# vercel
+.vercel
+
+# IDE & editor
+.vscode/
+.idea/
+*.swp
+>>>>>>> 63545d520a058fdede8089cb469d09922ef066f3
