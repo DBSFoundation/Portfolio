@@ -10,7 +10,8 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="text-5xl sm:text-6xl font-extrabold text-white drop-shadow-lg"
       >
-        Hi, I’m Dandy Dwi Septiadi
+        Hi, I’m 
+        <br />Dandy Dwi Septiadi
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -18,7 +19,7 @@ export default function Hero() {
         transition={{ delay: 0.5, duration: 1 }}
         className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl"
       >
-        Trader Crypto & Forex | Full-Stack Developer (React, Next.js, Node, TypeScript)  
+        Trader Crypto & Forex | Full-Stack Developer  
         <br />
         <span className="text-yellow-400 font-semibold">Airdrop Hunter since 2013</span>  
         <br />
