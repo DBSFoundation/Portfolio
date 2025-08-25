@@ -24,20 +24,6 @@ export default function Hero() {
         <br />
         Passionate about building fintech & crypto apps for global market.
       </motion.p>
-      <div className="mt-8 flex gap-6">
-        <a
-          href="#projects"
-          className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 transition"
-        >
-          View Projects
-        </a>
-        <a
-          href="#contact"
-          className="px-6 py-3 border border-gray-500 rounded-xl hover:bg-gray-700 transition"
-        >
-          Contact Me
-        </a>
-      </div>
     </section>
   );
 }
