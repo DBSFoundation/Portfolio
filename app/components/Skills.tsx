@@ -1,12 +1,13 @@
 "use client";
-import { FaReact, FaNodeJs, FaBitcoin, FaChartLine } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaBitcoin, FaChartLine, FaTools } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance, SiSpaceship } from "react-icons/si";
+import SectionHeading from "./SectionHeading";
 
-export default function Skills() {
+export default function SkillsSection() {
   return (
-    <section id="skills" className="py-16 px-6 bg-gray-900 text-white text-center">
-      <h2 className="text-3xl font-bold mb-12">🛠 Skills & Tools</h2>
-      <div className="flex flex-wrap justify-center gap-10 text-6xl text-blue-500">
+    <section id="skills" className="py-20 px-6 bg-gray-900">
+      <SectionHeading title="Skills & Tools" icon={<FaTools />} />
+      <div className="flex flex-wrap justify-center gap-10 text-6xl text-yellow-400">
         <FaReact title="React" />
         <SiNextdotjs title="Next.js" />
         <SiTailwindcss title="TailwindCSS" />

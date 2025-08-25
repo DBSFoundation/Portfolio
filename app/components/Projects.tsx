@@ -1,25 +1,27 @@
 "use client";
 import { motion } from "framer-motion";
+import { FaRocket } from "react-icons/fa";
+import SectionHeading from "./SectionHeading";
 
-const projects = [
-  { title: "Crypto Dashboard", desc: "Real-time price tracker using CoinGecko API.", live: "#", github: "#" },
-  { title: "E-Commerce Mini App", desc: "Full-stack cart & checkout app.", live: "#", github: "#" },
-  { title: "Real-Time Chat App", desc: "Messaging platform with Socket.io.", live: "#", github: "#" },
-  { title: "Library CRUD System", desc: "Add, edit, delete books with Node.js backend.", live: "#", github: "#" },
-];
+export default function ProjectsSection() {
+  const projects = [
+    { title: "Crypto Dashboard", desc: "Real-time price tracker using CoinGecko API with charts & search feature." },
+    { title: "E-Commerce Mini App", desc: "Full-stack app with cart, checkout, and admin panel. Built with Next.js & PostgreSQL." },
+    { title: "Real-Time Chat App", desc: "Messaging platform using Socket.io with user authentication & online status." },
+    { title: "Library CRUD System", desc: "Users can add, edit, and delete books. Backend built with Node.js & Express." }
+  ];
 
-export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6">
-      <h2 className="text-3xl font-bold text-center mb-12">🚀 Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+    <section id="projects" className="py-20 px-6 bg-gray-800">
+      <SectionHeading title="Projects" icon={<FaRocket />} />
+      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {projects.map((proj, i) => (
-          <motion.div key={i} whileHover={{ scale: 1.05 }} className="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <motion.div key={i} whileHover={{ scale: 1.03 }} className="bg-gray-700 p-6 rounded-2xl shadow hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
-            <p className="text-gray-300 mb-4">{proj.desc}</p>
-            <div className="flex gap-4 flex-wrap">
-              <a href={proj.live} className="text-blue-400 hover:underline">Live Demo</a>
-              <a href={proj.github} className="text-blue-400 hover:underline">GitHub</a>
+            <p className="mb-4">{proj.desc}</p>
+            <div className="flex gap-4">
+              <a href="#" className="text-yellow-400 hover:underline">Live Demo</a>
+              <a href="#" className="text-yellow-400 hover:underline">GitHub</a>
             </div>
           </motion.div>
         ))}

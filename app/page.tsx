@@ -20,6 +20,7 @@ export default function Home() {
         {darkMode ? "☀️ Light" : "🌙 Dark"}
       </button>
 
+      <Navbar />
       <Hero />
       <Projects />
       <Skills />
