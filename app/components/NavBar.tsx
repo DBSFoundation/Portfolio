@@ -1,90 +1,48 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { HiMenu, HiX } from "react-icons/hi";
-
-const sections = ["hero", "projects", "skills", "trading", "contact"];
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  const [active, setActive] = useState("hero");
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState("home");
 
-  // Sticky navbar
+  const sections = ["home", "projects", "skills", "trading", "contact"];
+
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 200;
+      for (let section of sections) {
+        const el = document.getElementById(section);
+        if (el && el.offsetTop <= scrollPos && scrollPos < el.offsetTop + el.offsetHeight) {
+          setActive(section);
+        }
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // IntersectionObserver untuk highlight section aktif
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    sections.forEach((section) => {
-      const el = document.getElementById(section);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setOpen(false);
-    }
-  };
-
   return (
-    <nav className={`fixed w-full z-50 transition-colors duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo text */}
-        <div 
-          onClick={() => scrollToSection("hero")} 
-          className="text-white font-bold text-xl cursor-pointer hover:text-yellow-400 transition"
-        >
-          Portfolio
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 text-gray-100 font-medium text-sm sm:text-base">
-          {sections.map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className={`hover:text-yellow-400 transition ${active === section ? "text-yellow-400" : ""}`}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
-          ))}
-        </div>
-
-        {/* Mobile Hamburger */}
-        <div className="md:hidden text-gray-100 text-2xl cursor-pointer" onClick={() => setOpen(!open)}>
-          {open ? <HiX /> : <HiMenu />}
-        </div>
+    <nav className="fixed w-full bg-gray-900 text-gray-200 flex justify-between items-center px-6 py-4 z-50 shadow">
+      <div className="font-bold text-xl text-blue-400">Portfolio</div>
+      <div className="hidden md:flex gap-6">
+        {sections.map((sec) => (
+          <Link key={sec} href={`#${sec}`} className={active===sec?"text-blue-400":"hover:text-blue-300"}>
+            {sec.charAt(0).toUpperCase()+sec.slice(1)}
+          </Link>
+        ))}
       </div>
-
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md shadow-lg absolute w-full left-0 top-full flex flex-col items-center py-6 gap-6">
-          {sections.map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className={`text-gray-100 text-lg font-medium hover:text-yellow-400 transition ${active === section ? "text-yellow-400" : ""}`}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
+      <div className="md:hidden">
+        <button onClick={()=>setMenuOpen(!menuOpen)} className="text-blue-400">
+          {menuOpen?"✖":"☰"}
+        </button>
+      </div>
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-gray-900 flex flex-col items-center md:hidden">
+          {sections.map((sec) => (
+            <Link key={sec} href={`#${sec}`} onClick={()=>setMenuOpen(false)} className={active===sec?"text-blue-400 py-2":"hover:text-blue-300 py-2"}>
+              {sec.charAt(0).toUpperCase()+sec.slice(1)}
+            </Link>
           ))}
         </div>
       )}
