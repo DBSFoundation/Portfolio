@@ -4,8 +4,8 @@ import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance } from "react-icons
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-800 text-white">
-      <h2 className="text-3xl font-bold mb-12 text-center text-blue-400 tracking-wide drop-shadow-lg">🛠 Skills & Tools</h2>
+    <section id="skills" className="py-20 px-6 bg-gray-900 text-white">
+      <h2 className="text-3xl font-bold mb-12 text-blue-400 text-center tracking-wide">🛠 Skills & Tools</h2>
       <div className="flex flex-wrap justify-center gap-10 text-6xl text-blue-400">
         <FaReact title="React"/>
         <SiNextdotjs title="Next.js"/>

@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -11,14 +9,14 @@ import ContactIcons from "./components/Contact";
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <main>
-        <Hero/>
-        <Projects/>
-        <Skills/>
-        <Trading/>
-        <Airdrop/>
-        <ContactIcons/>
+        <Hero />
+        <Projects />
+        <Skills />
+        <Trading />
+        <Airdrop />
+        <ContactIcons />
       </main>
     </>
   );
