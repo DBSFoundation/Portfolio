@@ -10,7 +10,6 @@ const skills = [
   { name: "Node.js", icon: <FaNodeJs size={50} className="text-green-500" /> },
   { name: "Crypto", icon: <FaBitcoin size={50} className="text-yellow-400" /> },
   { name: "Trading", icon: <FaChartLine size={50} className="text-green-400" /> },
-  { name: "Binance API", icon: <SiBinance size={50} className="text-yellow-500" /> },
   { name: "Airdrop Hunter", icon: <FaBitcoin size={50} className="text-yellow-300" /> },
 ];
 
