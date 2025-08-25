@@ -13,7 +13,7 @@ export default function Hero() {
         Trader Crypto & Forex | Full-Stack Developer | Airdrop Hunter sejak 2013  
       </motion.p>
       <motion.div initial={{opacity:0, scale:0.8}} animate={{opacity:1, scale:1}} transition={{duration:0.8, delay:0.5}}>
-        <Image src="/images/my-photo.jpg" alt="DandyDS" width={160} height={160} className="rounded-full border-4 border-blue-400 mt-6" />
+        <Image src="public/images/my-photo.jpg" alt="DandyDS" width={160} height={160} className="rounded-full border-4 border-blue-400 mt-6" />
       </motion.div>
     </section>
   );
