@@ -1,41 +1,29 @@
 "use client";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
-  const [active, setActive] = useState("projects");
-  const [scrollY, setScrollY] = useState(0);
-  const sections = ["projects","skills","trading","airdrop","contact"];
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    for (let s of sections) {
-      const el = document.getElementById(s);
-      if (el && scrollY >= el.offsetTop - 100) setActive(s);
-    }
-  }, [scrollY]);
+  const [open, setOpen] = useState(false);
+  const menu = ["Projects", "Skills", "Trading", "Airdrop", "Contact"];
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-900 text-white flex justify-between items-center py-4 px-6 z-50 shadow-md">
-      <div className="font-bold text-xl text-blue-400">Portfolio</div>
-      <ul className="flex gap-8">
-        {sections.map((item) => (
-          <li key={item}>
-            <Link
-              href={`#${item}`}
-              className={active===item ? "text-blue-400 font-semibold" : "hover:text-blue-300 transition"}
-              onClick={() => setActive(item)}
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </Link>
-          </li>
+    <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-gray-900 text-white z-50 shadow">
+      <div className="font-bold text-xl">Portfolio</div>
+      <div className="hidden md:flex gap-6">
+        {menu.map((item) => (
+          <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-blue-400 transition">{item}</a>
         ))}
-      </ul>
+      </div>
+      <div className="md:hidden cursor-pointer" onClick={()=>setOpen(!open)}>
+        {open ? <HiX size={28}/> : <HiMenu size={28}/>}
+      </div>
+      {open && (
+        <div className="absolute top-full left-0 w-full bg-gray-900 flex flex-col items-center py-4 gap-4 md:hidden">
+          {menu.map((item)=>(
+            <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-blue-400 transition">{item}</a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
