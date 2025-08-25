@@ -16,7 +16,7 @@ export default function Contact() {
           href="https://linkedin.com/in/dandyds" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-3 bg-gray-700 rounded-xl hover:bg-gray-600 transition"
+          className="flex items-center gap-2 px-4 py-3 bg-gray-800 rounded-xl hover:bg-gray-700 transition"
         >
           <FaLinkedin size={24} /> LinkedIn
         </a>
