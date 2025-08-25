@@ -18,9 +18,9 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="flex-1"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue">
             Hi, I’m 
-            <span className="text-blue-600 font-bold"><br />Dandy Dwi Septiadi </span>
+            <br />Dandy Dwi Septiadi
           </h1>
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-lg">
             Full-Stack Developer | Trader Crypto & Forex |{" "}
