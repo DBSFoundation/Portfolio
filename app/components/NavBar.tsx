@@ -10,23 +10,30 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // Sticky navbar
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-
-      sections.forEach((section) => {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop - 80;
-          const bottom = top + el.offsetHeight;
-          if (window.scrollY >= top && window.scrollY < bottom) {
-            setActive(section);
-          }
-        }
-      });
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // IntersectionObserver untuk highlight section aktif
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => {
+      const el = document.getElementById(section);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -40,8 +47,13 @@ export default function Navbar() {
   return (
     <nav className={`fixed w-full z-50 transition-colors duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div onClick={() => scrollToSection("hero")} className="w-10 h-10 rounded-full bg-yellow-400 cursor-pointer hover:scale-105 transition" />
+        {/* Logo text */}
+        <div 
+          onClick={() => scrollToSection("hero")} 
+          className="text-white font-bold text-xl cursor-pointer hover:text-yellow-400 transition"
+        >
+          Portfolio
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 text-gray-100 font-medium text-sm sm:text-base">
