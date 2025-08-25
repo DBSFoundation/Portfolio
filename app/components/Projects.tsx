@@ -5,27 +5,22 @@ const projects = [
   { 
     title: "Crypto Dashboard", 
     desc: "Real-time price tracker using CoinGecko API.", 
-    live: "#",
+    live: "https://t.me/DDS_Inc",
     github: "#"
   },
   { 
     title: "E-Commerce Mini App", 
     desc: "Full-stack cart & checkout app.", 
-    live: "#",
+    live: "https://t.me/DDS_Inc",
     github: "#"
   },
   { 
     title: "Real-Time Chat App", 
     desc: "Messaging platform with Socket.io.", 
-    live: "#",
+    live: "https://t.me/DDS_Inc",
     github: "#"
   },
-  { 
-    title: "Library CRUD System", 
-    desc: "Add, edit, delete books with Node.js backend.", 
-    live: "#",
-    github: "#"
-  }
+  
 ];
 
 export default function Projects() {

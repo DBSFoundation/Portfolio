@@ -8,7 +8,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: -50, scale: 0.8 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-5xl sm:text-6xl font-extrabold text-blue drop-shadow-lg"
+        className="text-5xl sm:text-6xl font-extrabold text-white drop-shadow-lg"
       >
         Hi, I’m 
         <br />Dandy Dwi Septiadi
