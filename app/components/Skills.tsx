@@ -1,6 +1,6 @@
 "use client";
 import { FaReact, FaNodeJs, FaBitcoin, FaChartLine } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance, SiBitcoin } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance, SiBitcoin, SiSpaceship } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -11,7 +11,7 @@ const skills = [
   { name: "Node.js", icon: <FaNodeJs size={50} /> },
   { name: "Bitcoin", icon: <FaBitcoin size={50} /> },
   { name: "Trading", icon: <FaChartLine size={50} /> },
-  { name: "Airdrop Hunter", icon: <SiBitcoin size={50} /> },
+  { name: "Airdrop Hunter", icon: <SiSpaceship size={50} /> },
 ];
 
 export default function Skills() {
