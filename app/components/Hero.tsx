@@ -1,20 +1,67 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-center text-white">
-      <motion.h1 initial={{opacity:0, y:-20}} animate={{opacity:1, y:0}} transition={{duration:0.8}} className="text-4xl font-bold mb-4 text-blue-400 drop-shadow-lg">
-        Hi, I’m 
+    <section
+      id="hero"
+      className="relative flex flex-col items-center justify-center text-center py-32 bg-gradient-to-br from-gray-900 to-gray-800"
+    >
+      {/* Heading */}
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl md:text-6xl font-bold mb-6 text-blue-400 drop-shadow-lg"
+      >
+        Hi, I’m
         <br />Dandy Dwi Septiadi
       </motion.h1>
-      <motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.3}} className="max-w-xl text-lg">
-        Trader Crypto & Forex | Full-Stack Developer | Airdrop Hunter sejak 2013  
+
+      {/* Subheading */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="text-lg md:text-xl max-w-2xl text-gray-200 mb-8"
+      >
+        Trader Crypto & Forex | Full-Stack Developer (React, Next.js, Node, TypeScript)
+        <br />
+        Passionate about building fintech & crypto apps for the global market.
       </motion.p>
-      <motion.div initial={{opacity:0, scale:0.8}} animate={{opacity:1, scale:1}} transition={{duration:0.8, delay:0.5}}>
-        <Image src="public/images/my-photo.jpg" alt="DandyDS" width={160} height={160} className="rounded-full border-4 border-blue-400 mt-6" />
+
+      {/* Foto */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5 }}
+        className="mb-8"
+      >
+        <Image
+          src="/images/my-photo.jpg"      // <-- path public
+          width={180}
+          height={180}
+          alt="Premilyader"
+          className="rounded-full shadow-xl"
+        />
       </motion.div>
+
+      {/* Buttons */}
+      <div className="flex gap-4 flex-wrap justify-center">
+        <a
+          href="#projects"
+          className="px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white rounded-xl shadow-lg transition"
+        >
+          View Projects
+        </a>
+        <a
+          href="#contact"
+          className="px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-700 text-gray-200 transition"
+        >
+          Contact Me
+        </a>
+      </div>
     </section>
   );
 }
