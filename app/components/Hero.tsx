@@ -20,10 +20,10 @@ export default function Hero() {
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
             Hi, I’m 
-            <br />Dandy Dwi Septiadi
+            <span className="text-blue-400 font-semibold"><br />Dandy Dwi Septiadi </span>
           </h1>
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-lg">
-            Trader Crypto & Forex | Full-Stack Developer |{" "}
+            Full-Stack Developer | Trader Crypto & Forex |{" "}
             <span className="text-blue-400 font-semibold">Airdrop Hunter since 2013</span>
           </p>
         </motion.div>
