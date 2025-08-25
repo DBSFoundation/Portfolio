@@ -18,10 +18,11 @@ export default function Hero() {
         transition={{ delay: 0.5, duration: 0.8 }}
         className="mt-4 text-lg text-gray-300 max-w-xl"
       >
-        Trader Crypto & Forex | Full-Stack Developer (React, Next.js, Node, TypeScript)  
+        Trader Crypto & Forex | Full-Stack Developer  
         <br />
-        <span className="text-yellow-400 font-semibold">Airdrop Hunter since 2013</span>  
-        Passionate about building fintech & crypto apps for the global market.
+        <span className="text-yellow-400 font-semibold">Airdrop Hunter since 2013
+          </span>  
+        <br />Passionate about building fintech & crypto apps for the global market.
       </motion.p>
     </section>
   );
