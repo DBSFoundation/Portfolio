@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "./components/NavBar";
-import Hero from "./components/Skills";
+import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import TradingJourney from "./components/TradingJourney";
