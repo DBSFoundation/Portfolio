@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white dark:bg-gray-800 px-6 py-4 shadow sticky top-0 z-50">
       <div className="flex justify-between items-center">
-        <h1 className="font-bold text-xl">Dandy DS</h1>
+        <h1 className="font-bold text-xl">Portfolio</h1>
         <div className="md:hidden">
           <button onClick={() => setOpen(!open)}>
             {open ? <FaTimes size={24} /> : <FaBars size={24} />}
