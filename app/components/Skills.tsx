@@ -16,7 +16,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="py-20 text-center">
+    <section className="py-20 text-center" id="skills">
       <h2 className="text-3xl font-bold mb-12">🛠 Skills & Tools</h2>
       <div className="flex flex-wrap justify-center gap-12">
         {skills.map((s, i) => (
