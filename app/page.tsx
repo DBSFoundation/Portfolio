@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
