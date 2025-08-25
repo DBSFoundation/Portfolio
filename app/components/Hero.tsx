@@ -17,7 +17,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl"
+        className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl" id="hero"
       >
         Trader Crypto & Forex | Full-Stack Developer  
         <br />

@@ -7,7 +7,7 @@ export default function Blog() {
       <p className="text-gray-300 max-w-2xl mx-auto mb-6">
         I write about web development, crypto apps, airdrops, and trading psychology. Stay tuned for upcoming posts!
       </p>
-      <a href="#" className="px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600 transition">
+      <a href="#" className="px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600 transition" id="blog">
         Read My Blog
       </a>
     </section>
