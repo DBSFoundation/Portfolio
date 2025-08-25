@@ -20,7 +20,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 text-center" id="projects">
+    <section className="py-20 bg-gray-900 text-center">
       <h2 className="text-3xl font-bold mb-10">🚀 Projects</h2>
       <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
         {projects.map((p, i) => (

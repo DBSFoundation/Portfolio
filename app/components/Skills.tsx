@@ -1,5 +1,4 @@
 "use client";
-
 import { FaReact, FaNodeJs, FaBitcoin, FaChartLine } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiTypescript, SiBinance } from "react-icons/si";
 
@@ -12,13 +11,14 @@ const skills = [
   { name: "Crypto", icon: <FaBitcoin size={50} className="text-yellow-400" /> },
   { name: "Trading", icon: <FaChartLine size={50} className="text-green-400" /> },
   { name: "Binance API", icon: <SiBinance size={50} className="text-yellow-500" /> },
+  { name: "Airdrop Hunter", icon: <FaBitcoin size={50} className="text-yellow-300" /> },
 ];
 
 export default function Skills() {
   return (
-    <section className="py-20 text-center" id="skills">
+    <section className="py-20 text-center">
       <h2 className="text-3xl font-bold mb-10">🛠 Skills & Tools</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-10 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-10 max-w-4xl mx-auto">
         {skills.map((s, i) => (
           <div key={i} className="flex flex-col items-center gap-2">
             {s.icon}

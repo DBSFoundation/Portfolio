@@ -1,17 +1,16 @@
 "use client";
-
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6" id="hero">
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-5xl font-bold text-blue-400"
       >
-        Hi, I’m Premilyader 👋
+        Hi, I’m Dandy DS 👋
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -20,6 +19,8 @@ export default function Hero() {
         className="mt-4 text-lg text-gray-300 max-w-xl"
       >
         Trader Crypto & Forex | Full-Stack Developer (React, Next.js, Node, TypeScript)  
+        <br />
+        <span className="text-yellow-400 font-semibold">Airdrop Hunter since 2013</span>  
         Passionate about building fintech & crypto apps for the global market.
       </motion.p>
     </section>
