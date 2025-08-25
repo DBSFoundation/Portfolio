@@ -20,6 +20,12 @@ const projects = [
     live: "https://t.me/DDS_Inc",
     github: "#"
   },
+  { 
+    title: "Telegram Channel", 
+    desc: "Messaging platform for community keep strong", 
+    live: "https://t.me/DDS_Inc",
+    github: "#"
+  },
   
 ];
 
