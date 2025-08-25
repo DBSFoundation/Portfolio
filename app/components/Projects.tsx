@@ -5,17 +5,17 @@ export default function Projects() {
     {
       title: "Crypto Dashboard",
       desc: "Real-time price tracker using CoinGecko API with charts & search feature.",
-      link: "#",
+      link: "https://t.me/DDS_Inc",
     },
     {
       title: "E-Commerce Mini App",
       desc: "Full-stack app with cart, checkout, and admin panel. Built with Next.js & PostgreSQL.",
-      link: "#",
+      link: "https://t.me/DDS_Inc",
     },
     {
       title: "Trading Bot",
       desc: "Automated trading bot with custom strategies for crypto & forex.",
-      link: "#",
+      link: "https://t.me/DDS_Inc",
     },
   ];
 
