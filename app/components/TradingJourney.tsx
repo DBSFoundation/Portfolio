@@ -10,7 +10,7 @@ const journey = [
 
 export default function TradingJourney() {
   return (
-    <section className="py-20 px-6 text-center" id="trading">
+    <section id="trading" className="py-20 px-6 text-center">
       <h2 className="text-3xl font-bold mb-10">📈 Trading & Crypto Journey</h2>
       <div className="max-w-4xl mx-auto space-y-6">
         {journey.map((j, i) => (
