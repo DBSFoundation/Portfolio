@@ -11,7 +11,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-5xl font-bold"
       >
-        Hi, I’m <span className="text-blue-400">Dandy</span>
+        Hi, I’m <span className="text-blue-400">Dandy Dwi Septiadi</span>
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ export default function Hero() {
         transition={{ delay: 0.5, duration: 0.8 }}
         className="mt-4 text-lg text-gray-300"
       >
-        Full Stack Developer | Web3 Enthusiast | Trader
+        Full Stack Developer | Web3 Enthusiast | Trader Crypto & Forex
       </motion.p>
     </section>
   );
