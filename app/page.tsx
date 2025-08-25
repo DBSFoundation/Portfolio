@@ -5,7 +5,6 @@ import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import TradingJourney from "./components/TradingJourney";
-import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <TradingJourney />
-      <Blog />
       <Contact />
     </main>
   );
