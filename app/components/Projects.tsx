@@ -3,7 +3,8 @@
 export default function Projects() {
   const projects = [
     { title: "Portfolio Website", link: "https://dandyds-portfolio.vercel.app/" },
-    { title: "Crypto Dashboard", link: "https://t.me/DDS_Inc" },
+    { title: "Crypto Channel", link: "https://t.me/DDS_Inc" },
+    { title: "Signal Forex", link: "https://t.me/DDS_Inc" },
   ];
 
   return (
