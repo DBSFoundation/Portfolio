@@ -9,6 +9,8 @@ export default function Navbar() {
     { name: "Home", href: "#hero" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Trading Journey", href: "#tradingjourney" },
+    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
   ];
 
