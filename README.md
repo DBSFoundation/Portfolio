@@ -3,7 +3,7 @@
 Hi 👋, ini adalah portfolio saya yang dibangun dengan **Next.js + TailwindCSS**  
 Dideploy otomatis di Vercel ✨  
 
-🌍 **Live Website:** [Klik di sini](https://portfolio.vercel.app)  
+🌍 **Live Website:** [Klik di sini](https://dandyds-portfolio.vercel.app/)  
 
 ---
 
