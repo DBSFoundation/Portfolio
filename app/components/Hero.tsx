@@ -5,11 +5,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left py-32 sm:py-40 lg:py-48 
-                 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700"
+      className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left py-32 sm:py-40 lg:py-48 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700"
     >
-      {/* Overlay optional untuk efek gelap lebih dramatis */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      {/* Overlay untuk kontras teks */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start md:gap-12 max-w-6xl mx-auto px-6">
         {/* Teks */}
@@ -20,8 +19,7 @@ export default function Hero() {
           className="flex-1"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
-            Hi, I’m 
-            <br />Dandy Dwi Septiadi
+            Hi, I’m Dandy Dwi Septiadi 👋
           </h1>
           <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-300 max-w-lg">
             Trader Crypto & Forex | Full-Stack Developer |{" "}
@@ -38,7 +36,7 @@ export default function Hero() {
           className="mt-8 md:mt-0 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer"
         >
           <img
-            src="/images/my-photo.jpg" // tetap pakai foto profil
+            src="/images/my-photo.jpg" // ganti dengan foto Anda
             alt="Premilyader"
             className="w-full h-full object-cover"
           />
